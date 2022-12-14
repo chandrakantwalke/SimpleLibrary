@@ -30,6 +30,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    flavorDimensions 'sample'
+    productFlavors {
+        Staging {
+            buildConfigField "String", "SERVER_URL", "\"https://console-staging.neo-world.com\""
+            buildConfigField "String", "BUILD_STATUS", "\"Staging\""
+            versionCode 1
+            versionName "2.8"
+        }
+        Live {
+            buildConfigField "String", "SERVER_URL", "\"http://34.93.109.81\""
+            buildConfigField "String", "BUILD_STATUS", "\"live\""
+            versionCode 1
+            versionName "1.0"
+        }
+    }
 }
 
 dependencies {
