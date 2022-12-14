@@ -30,21 +30,6 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    flavorDimensions 'sample'
-    productFlavors {
-        Staging {
-            buildConfigField "String", "BASE_URL", "\"https://wwww.chanrakant.com\""
-            buildConfigField "String", "BUILD_STATUS", "\"UAT\""
-            versionCode 1
-            versionName "2.8"
-        }
-        Live {
-            buildConfigField "String", "SERVER_URL", "\"http://34.93.109.81\""
-            buildConfigField "String", "BASE_URL", "\"PROD\""
-            versionCode 1
-            versionName "1.0"
-        }
-    }
 }
 
 dependencies {
